@@ -52,7 +52,7 @@ var jsObjects = [ // key value pairs inside the array of objects.
         tweet : `Some people ask me who has the biggest penis in Hollywood. Easy. Bette Midler`,
         username : `Stan Lee`,
         created_at : `04-21-2020`,
-        age : 12
+        age : 22
     },
     {
         tweet : `I hope you have a great weekend! Except you, Lisa Kudrow. F**k you`,
@@ -76,19 +76,19 @@ var jsObjects = [ // key value pairs inside the array of objects.
         tweet :  `I hate 'Matthew Perry Syndrome'- I'm a sarcastic loser with a giant head.`,
         username : `Peter Parker`,
         created_at : `04-25-2020`,
-        age : 18
+        age : 12
     },
     {
         tweet : `Oh, look at me...I'm Ryan Gosling, I have perfect bone structure and kind eyes. Go **** yourself Ryan Gosling`,
         username : `Brock Lesnar`,
         created_at : `04-25-2020`,
-        age : 39
+        age : 11
     },
     {
         tweet : `russel crowe is delightfully paradoxical in that he is a huge d**k with a small penis`,
         username : `Jesse Jackson`,
         created_at : `04-26-2020`,
-        age : 18
+        age : 10
     },
 ]
 // console.log(jsObjects);
@@ -99,13 +99,14 @@ var jsObjects = [ // key value pairs inside the array of objects.
 
 // not sure if i did this right was expecting all key value pairs to print true or false to console for each user.
 function checkAge(jsObj){
-    for(i = 0; i < jsObj.length; i ++){    //loops through array of objects
+    for(i = 0; i < jsObj.length; i++){    //loops through array of objects
         if(jsObj[i].age >= 18){            //checks to see if age is greater to or equal to 18
-            return true                    //prints true to console if 18 or older
+            result = true                    //prints true to console if 18 or older
         }else if(jsObj[i].age < 18){       //checks to see if user is younger than 18
-            return false                   //if younger than 18 prints to console false 
+            result = false                   //if younger than 18 prints to console false 
         }
     }
+    return result
 }
 var jsObj = checkAge(jsObjects);           // loades up jsObjects into function
 console.log(jsObj);                        // prints return to console wether true or false
